@@ -25,6 +25,8 @@
             "font": default
             "up" : btn_up
             "down" : btn_down
+            "pressedOffsetY" : 1
+            "pressedOffsetX" : 1
         }
     }
 

@@ -11,6 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
+import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
@@ -69,6 +70,7 @@ public class Screen implements com.badlogic.gdx.Screen{
 	}
 
 	public void show() {
+		System.out.println("SHOW");
 		mainTable.add(new Image(tex)).fill().expand().row();
 		final Label label = new Label("This is a demo of libgdx for Epic Projects", skin);
 		mainTable.add(label).row();
@@ -93,6 +95,7 @@ public class Screen implements com.badlogic.gdx.Screen{
 			}
 		});
 		stage.addActor(mainTable);
+		Gdx.input.setInputProcessor(stage);
 	}
 	
 	Stage stage;
