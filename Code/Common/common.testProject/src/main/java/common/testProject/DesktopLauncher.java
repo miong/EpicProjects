@@ -3,6 +3,10 @@ package common.testProject;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 
+/**
+ * Test Project gdx part desktop application launcher.
+ * @author Bubul / Funky
+ */
 public class DesktopLauncher {
 	
 	public static void main (String[] arg) {
