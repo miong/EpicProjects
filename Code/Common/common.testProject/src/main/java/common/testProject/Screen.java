@@ -23,7 +23,10 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.tools.texturepacker.TexturePacker;
 import com.badlogic.gdx.tools.texturepacker.TexturePacker.Settings;
 
-
+/**
+ * Demo game screen
+ * @author Bubul/Funky
+ */
 public class Screen implements com.badlogic.gdx.Screen{
 
 	public Screen() {
