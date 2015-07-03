@@ -21,12 +21,17 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Window;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.tools.texturepacker.TexturePacker;
+import com.badlogic.gdx.tools.texturepacker.TexturePacker.Settings;
 
 
 public class Screen implements com.badlogic.gdx.Screen{
 
 	public Screen() {
-		TexturePacker.process(Gdx.files.internal("img").path(), Gdx.files.internal("packed").path(), "pack.atlas");
+		Settings setting = new Settings();
+		setting.maxHeight = 2048;
+		setting.maxWidth = 2048;
+		setting.silent = true;
+		TexturePacker.process(setting ,Gdx.files.internal("img").path(), Gdx.files.internal("packed").path(), "pack.atlas");
 		TextureAtlas atlas = new TextureAtlas(Gdx.files.internal("packed/pack.atlas"));
 		skin = new Skin(Gdx.files.internal("res/pack.json"),atlas);
 		stage = new Stage();
