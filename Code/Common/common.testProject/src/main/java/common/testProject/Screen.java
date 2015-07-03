@@ -4,6 +4,7 @@ import javax.swing.Popup;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.loaders.TextureAtlasLoader;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -32,7 +33,7 @@ public class Screen implements com.badlogic.gdx.Screen{
 		mainTable = new Table(skin);
 		mainTable.setFillParent(true);
 		tex = new Texture(Gdx.files.internal("img/test.png"));
-		
+		backSoung = Gdx.audio.newSound(Gdx.files.internal("sound/LoginScreenLoop.mp3"));
 	}
 	
 	public void dispose() {
@@ -48,7 +49,7 @@ public class Screen implements com.badlogic.gdx.Screen{
 
 	public void pause() {
 		// TODO Auto-generated method stub
-		
+		backSoung.pause();
 	}
 
 	public void render(float arg0) {
@@ -66,7 +67,7 @@ public class Screen implements com.badlogic.gdx.Screen{
 
 	public void resume() {
 		// TODO Auto-generated method stub
-		
+		backSoung.resume();
 	}
 
 	public void show() {
@@ -96,11 +97,13 @@ public class Screen implements com.badlogic.gdx.Screen{
 		});
 		stage.addActor(mainTable);
 		Gdx.input.setInputProcessor(stage);
+		backSoung.loop();
 	}
 	
 	Stage stage;
 	Table mainTable;
 	Texture tex;
 	Skin skin;
+	Sound backSoung;
 
 }
