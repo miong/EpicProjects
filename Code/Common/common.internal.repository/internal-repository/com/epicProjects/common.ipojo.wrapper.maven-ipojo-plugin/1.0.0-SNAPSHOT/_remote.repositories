@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sun Jul 05 00:25:51 CEST 2015
+common.ipojo.wrapper.maven-ipojo-plugin-1.0.0-SNAPSHOT.jar>=
+common.ipojo.wrapper.maven-ipojo-plugin-1.0.0-SNAPSHOT.pom>=

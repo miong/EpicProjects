@@ -44,5 +44,20 @@
 			<artifactId>common.gdxWrapper.gdx-tools</artifactId>
 			<version>${gdx.wrapper.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.epicProjects</groupId>
+			<artifactId>common.twl.wrapper</artifactId>
+			<version>${gdx.wrapper.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.epicProjects</groupId>
+			<artifactId>common.twl.wrapper</artifactId>
+			<version>${gdx.wrapper.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.epicProjects</groupId>
+			<artifactId>common.plexus-util.wrapper</artifactId>
+			<version>${gdx.wrapper.version}</version>
+		</dependency>
 	</dependencies>
 </project>
