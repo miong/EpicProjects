@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9ad9bd40_7915d03e",
+        "filename": "Code/Common/common.testProject/src/main/java/common/testProject/gdxPart/GameModel.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1005569
+      },
+      "writtenOn": "2015-07-22T21:07:07Z",
+      "side": 1,
+      "message": "L\u0027alignement n\u0027est pas bon Mr Hostache",
+      "revId": "987c7e6c56b551d59ceb34a7cd133ac9705a0b4a",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
