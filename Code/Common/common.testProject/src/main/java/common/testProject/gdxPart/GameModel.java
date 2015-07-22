@@ -8,7 +8,10 @@ import com.badlogic.gdx.Game;
  *
  */
 public class GameModel extends Game{
-
+/**
+ *  The width of the game window.
+ *  The height of the game window.
+ */
 	public static final int WIDTH = 800;
 	public static final int HEIGHT = 400;
 
