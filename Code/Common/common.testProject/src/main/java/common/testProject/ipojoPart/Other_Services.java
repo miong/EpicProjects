@@ -25,12 +25,14 @@ public class Other_Services {
 		new Thread(new Runnable() {
 			
 			public void run() {
+				System.out.println("Say Hello ?");
 				_helloService.printHello();
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
+				System.out.println("Say Goodbye ?");
 				_helloService.printGoodBye();
 			}
 		}).start();

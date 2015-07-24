@@ -26,27 +26,15 @@ public class Hello_Service implements HELLO_ServiceInterface {
 	/**
 	 * 
 	 */
-	@Validate
 	public void printHello() {
 		System.out.println("Hello_Service:  Hello dear user !!! I'm an IPOJO service.");
-        LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-        config.width=GameModel.WIDTH; // sets window width
-        config.height=GameModel.HEIGHT;  // sets window height
-        new LwjglApplication(new GameModel(), config);
 	}
 
 	/**
 	 * 
 	 */
-	@Invalidate
 	public void printGoodBye() {
 		System.out.println("Hello_Service:  GoodBye!.");
-	}
-	
-	
-	public static void main(String[] args) {
-		Hello_Service test = new Hello_Service();
-		test.printHello();
 	}
 
 }
