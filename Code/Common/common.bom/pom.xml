@@ -16,12 +16,18 @@
 		<internal-repository.version>1.0.0-SNAPSHOT</internal-repository.version>
 		<gdx.wrapper.version>1.0.0-SNAPSHOT</gdx.wrapper.version>
 		<ipojo.wrapper.version>1.0.0-SNAPSHOT</ipojo.wrapper.version>
+		<ormlite.wrapper.version>1.0.0-SNAPSHOT</ormlite.wrapper.version>
 	</properties>
 
 	<modules>
-		<module>../common.internal.repository</module><!-- Need to be first ! -->
+		<!-- INTERNAL REPOSITORY -->
+		<module>../common.internal.repository</module>
+		<!-- WRAPPERS MODULES -->
 		<module>../common.gdx.wrapper</module>
 		<module>../common.ipojo.wrapper</module>
+		<module>../common.ormlite.wrapper</module>
+		<!-- SERVICES MODULES -->
+		<!-- TEST MODULES -->
 		<module>../common.testProject</module>
 	</modules>
 
