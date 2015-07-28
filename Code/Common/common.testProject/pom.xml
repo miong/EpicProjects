@@ -33,6 +33,12 @@
 			<type>pom</type>
 		</dependency>
 		<dependency>
+			<groupId>com.epicProjects</groupId>
+			<artifactId>common.ormlite.wrapper</artifactId>
+			<version>${ormlite.wrapper.version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.ipojo.manipulator</artifactId>
 			<version>1.12.1</version>
@@ -118,25 +124,6 @@
 							</resources>
 						</configuration>
 					</execution>
-					<!-- <execution> -->
-					<!-- <id>export-bundle-to-self-osgi-directory</id> -->
-					<!-- <phase>install</phase> -->
-					<!-- <goals> -->
-					<!-- <goal>copy-resources</goal> -->
-					<!-- </goals> -->
-					<!-- <configuration> -->
-					<!-- <outputDirectory>${project.basedir}/osgi/bundle</outputDirectory> -->
-					<!-- <resources> -->
-					<!-- <resource> -->
-					<!-- <directory>${project.basedir}/target</directory> -->
-					<!-- <filtering>true</filtering> -->
-					<!-- <includes> -->
-					<!-- <include>${project.build.finalName}.jar</include> -->
-					<!-- </includes> -->
-					<!-- </resource> -->
-					<!-- </resources> -->
-					<!-- </configuration> -->
-					<!-- </execution> -->
 				</executions>
 			</plugin>
 			<plugin>
