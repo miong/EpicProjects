@@ -1,0 +1,18 @@
+Pour voir les modifications et créer sont commit : git gui
+
+Pour mettre de coté les modification non commités (si besoin) : git stash
+
+Pour recupere l'état distant du serveur git : git fetch
+
+Pour appliquer l'état distant a votre machine local : git rebase -i
+Faire echape puis ":wq" et enfin entrer pour conserver votre commit
+
+Si des conflits sont révélés faire : git mergetool
+Regler tous les conflits indiquées. Une fois cela fait vous pouver faire : git rebase --continue
+puis tester vos modifications après merge.
+
+EN CAS DE DOUTES OU DE PROBLEMES => faire : git rebase --abort et appeler un ami pouvant vous aider
+
+Pour partager votre commit et ouvrir sa relecture faire : git review
+
+Pour récuperer les modifications misent de coté (si il y en a) : git stash pop
