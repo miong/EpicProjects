@@ -13,24 +13,26 @@ import common.testProject.gdxPart.GameModel;
 
 public class Launcher_Launcher {
 
+	public static volatile boolean _isRunning;
+	
 	public static void main(String[] args) {
 		System.out.println("STARTING IPOJO SERVICES LAUNCHER");
 
 		try {
-			OPENGL_THREAD = Thread.currentThread();
 			final byte[] buffer = new byte[512];
 
 			File cacheDir = new File("./osgi/felix-cache");
 			suppressDir(cacheDir);
 			String cmd = "java -jar ./bin/felix.jar";
 			Process proc = Runtime.getRuntime().exec(cmd, null, new File("./osgi"));
+			_isRunning = true;
 			final InputStream inStream = proc.getInputStream();
 			final InputStream errStream = proc.getErrorStream();
 			new Thread(new Runnable() {
 
 				public void run() {
 					// TODO Auto-generated method stub
-					while (true) {
+					while (_isRunning) {
 						try {
 							Thread.sleep(500);
 							if (inStream.available() > 0) {
@@ -51,7 +53,7 @@ public class Launcher_Launcher {
 
 				public void run() {
 					// TODO Auto-generated method stub
-					while (true) {
+					while (_isRunning) {
 						try {
 							Thread.sleep(500);
 							if (errStream.available() > 0) {
@@ -72,6 +74,7 @@ public class Launcher_Launcher {
 			System.out.println("-------------------------");
 			System.out.println("END OF LAUNCHER - KILLING OSGI SERVER");
 			proc.destroy();
+			_isRunning = false;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -86,8 +89,5 @@ public class Launcher_Launcher {
 		cacheDir.delete();
 		System.out.println(cacheDir.getAbsolutePath() + " deleted [" + !cacheDir.exists() + "]");
 	}
-
-	/** The openGL thread. */
-	public static Thread OPENGL_THREAD;
 
 }
