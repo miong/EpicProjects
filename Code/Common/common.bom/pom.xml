@@ -17,6 +17,8 @@
 		<gdx.wrapper.version>1.0.0-SNAPSHOT</gdx.wrapper.version>
 		<ipojo.wrapper.version>1.0.0-SNAPSHOT</ipojo.wrapper.version>
 		<ormlite.wrapper.version>1.0.0-SNAPSHOT</ormlite.wrapper.version>
+		<serviceRouter.version>1.0.0-SNAPSHOT</serviceRouter.version>
+		<ormManager.version>1.0.0-SNAPSHOT</ormManager.version>
 	</properties>
 
 	<modules>
@@ -27,6 +29,8 @@
 		<module>../common.ipojo.wrapper</module>
 		<module>../common.ormlite.wrapper</module>
 		<!-- SERVICES MODULES -->
+		<module>../common.ormManager.api</module>
+		<module>../common.serviceRouter.api</module>
 		<!-- TEST MODULES -->
 		<module>../common.testProject</module>
 	</modules>
