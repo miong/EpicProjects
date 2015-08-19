@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
@@ -15,17 +17,18 @@ public class Launcher_Launcher {
 
 	public static volatile boolean _isRunning;
 	
+	
 	public static void main(String[] args) {
+		
 		System.out.println("STARTING IPOJO SERVICES LAUNCHER");
 
 		try {
 			final byte[] buffer = new byte[512];
-
+			_isRunning = true;
 			File cacheDir = new File("./osgi/felix-cache");
 			suppressDir(cacheDir);
 			String cmd = "java -jar ./bin/felix.jar";
 			Process proc = Runtime.getRuntime().exec(cmd, null, new File("./osgi"));
-			_isRunning = true;
 			final InputStream inStream = proc.getInputStream();
 			final InputStream errStream = proc.getErrorStream();
 			new Thread(new Runnable() {
@@ -75,6 +78,7 @@ public class Launcher_Launcher {
 			System.out.println("END OF LAUNCHER - KILLING OSGI SERVER");
 			proc.destroy();
 			_isRunning = false;
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -89,5 +93,5 @@ public class Launcher_Launcher {
 		cacheDir.delete();
 		System.out.println(cacheDir.getAbsolutePath() + " deleted [" + !cacheDir.exists() + "]");
 	}
-
+	
 }

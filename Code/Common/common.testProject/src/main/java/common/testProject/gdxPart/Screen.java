@@ -47,12 +47,12 @@ public class Screen implements com.badlogic.gdx.Screen{
 	public void dispose() {
 		tex.dispose();
 		stage.dispose();
+		skin.dispose();
 		
 	}
 
 	public void hide() {
 		stage.clear();
-		
 	}
 
 	public void pause() {
