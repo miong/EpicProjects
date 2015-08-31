@@ -19,6 +19,7 @@
 		<ormlite.wrapper.version>1.0.0-SNAPSHOT</ormlite.wrapper.version>
 		<serviceRouter.version>1.0.0-SNAPSHOT</serviceRouter.version>
 		<ormManager.version>1.0.0-SNAPSHOT</ormManager.version>
+		<configuration.version>1.0.0-SNAPSHOT</configuration.version>
 	</properties>
 
 	<modules>
@@ -29,6 +30,7 @@
 		<module>../common.ipojo.wrapper</module>
 		<module>../common.ormlite.wrapper</module>
 		<!-- SERVICES MODULES -->
+		<module>../common.configuration.api</module>
 		<module>../common.ormManager.api</module>
 		<module>../common.serviceRouter.api</module>
 		<!-- TEST MODULES -->
